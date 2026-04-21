@@ -1,0 +1,35 @@
+body {
+    font-family: Papyrus, sans-serif;
+    background-color: #2f45b0;
+}
+
+.contendor{
+    width: 300px; 
+    /* Margin es la distancia del borde hacia afuera*/
+    /* 1.-Top, button  2.- Right, Left */
+    margin: 50px auto;
+    /* Padding es la distancia del borde hacia adentro */
+    /* Como es un solo valor, se aplica para top, right, bottom y left */
+    padding: 20px;
+    background-color: rgb(179, 146, 36);
+}
+
+h1{
+    text-align: center;
+}
+
+input{
+    width: 70%;
+    margin-top: 10px;
+    font-family: Papyrus, sans-serif;
+}
+
+.boton-formulario{
+    width: 30%;
+    background-color: #32be5e;
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    margin-top: 7px;
+    border: none;
+    font-family: Papyrus, sans-serif;
+}

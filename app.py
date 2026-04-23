@@ -1,5 +1,4 @@
-from flask import Flask, render_template
-
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -16,5 +15,22 @@ def index():
 def hola():
     return render_template('hola.html')
 
+@app.route('/calculadora')
+def calculadora():
+    return render_template('calculadora.html')
+
+@app.route('/calCULOS', methods=['POST'])
+def calCULOS():
+    try:
+        num1 = float(request.form.get('value1'))
+        num2 = float(request.form.get('value2'))
+        resultado = num1 + num2
+        
+        return render_template('calculadora.html', resultado = resultado)    
+    except(ValueError):
+        return render_template('calculadora.html', resultado = None)
+    
+    
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

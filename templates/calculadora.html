@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+</html>
+    <head>
+        <title>Proyecto Cocodrilo</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    </head>
+    <body>
+        <div class="calculadora">
+            <form action="{{ url_for('calCULOS')}}" method="POST">
+                <h1>Bienvenido a la tremenda calculadora mas perrona de todas las calculadoras existentes en todo el mundi mundial</h1>
+
+                <label>Ingresa un primer valor Nga:</label>
+                <input type="number" name="value1">
+                <label>Ingresa un segundo valor Nga:</label>
+                <input type="number" name="value2">
+
+                <button type="submit" class="boton-formulario">Enviar</button>
+            </form>
+            {& if resultado is not none &} 
+                <p>El resultado es: {{ resultado }}</p>
+            {& endif &}
+        </div>
+    </body>
